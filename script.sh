@@ -1,8 +1,7 @@
 #!/bin/bash
 for I in {1..5}; do
   echo $I
-  sudo useradd -m megastar$I --shell /bin/bash
-  sudo useradd -m superstar$I --shell /bin/bash
+  sudo useradd -m ansibleadmin$I --shell /bin/bash
   sleep 1
 done
 cat /etc/passwd | grep -i megastar
