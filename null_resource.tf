@@ -20,8 +20,8 @@ resource "null_resource" "prod-file-remoteexec" {
     inline = [
       "sudo chmod 777 /tmp/script.sh",
       "sudo /tmp/script.sh",
-      "sudo apt-get update -y",
-      "sudo apt-get install -y jq unzip",
+      "sudo apt update -y",
+      "sudo apt install -y jq unzip",
       "sudo rm -rf /tmp/terraform",
       "wget https://releases.hashicorp.com/terraform/1.14.6/terraform_1.14.6_linux_amd64.zip -P /tmp",
       "sudo unzip -o /tmp/terraform_1.14.6_linux_amd64.zip -d /tmp",
